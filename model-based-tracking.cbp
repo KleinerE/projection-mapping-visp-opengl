@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="model-based-tracking" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/model-based-tracking" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="--model_color model/cube/cube.cao --use_edges 1 --use_klt 1 --use_depth 1 --learn" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="/usr/local/include/visp3" />
+					<Add directory="/usr/include/OGRE" />
+					<Add directory="/usr/include/ois" />
+					<Add directory="/usr/include/pcl-1.8" />
+					<Add directory="/usr/include/eigen3" />
+				</Compiler>
+				<Linker>
+					<Add library="libvisp_core" />
+					<Add library="libvisp_ar" />
+					<Add library="libvisp_blob" />
+					<Add library="libvisp_detection" />
+					<Add library="libvisp_gui" />
+					<Add library="libvisp_imgproc" />
+					<Add library="libvisp_io" />
+					<Add library="libvisp_klt" />
+					<Add library="libvisp_mbt" />
+					<Add library="libvisp_me" />
+					<Add library="libvisp_robot" />
+					<Add library="libvisp_sensor" />
+					<Add library="libvisp_tt_mi" />
+					<Add library="libvisp_tt" />
+					<Add library="libvisp_vision" />
+					<Add library="libvisp_visual_features" />
+					<Add library="libvisp_vs" />
+					<Add library="libopencv_core" />
+					<Add library="libopencv_imgproc" />
+					<Add library="libopencv_highgui" />
+					<Add library="libopencv_ml" />
+					<Add library="libopencv_video" />
+					<Add library="libopencv_features2d" />
+					<Add library="libopencv_calib3d" />
+					<Add library="libopencv_objdetect" />
+					<Add library="libopencv_stitching" />
+					<Add library="libboost_system" />
+					<Add library="librealsense2" />
+					<Add directory="/usr/local/lib" />
+					<Add directory="/usr/lib/x86_64-linux-gnu" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/model-based-tracking" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

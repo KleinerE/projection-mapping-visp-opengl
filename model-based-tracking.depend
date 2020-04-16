@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1586265919 source:/home/eran-lab/Code/model-based-tracking/main.cpp
+	<iostream>
+	<visp3/core/vpConfig.h>
+	<visp3/core/vpDisplay.h>
+	<visp3/core/vpIoTools.h>
+	<visp3/core/vpXmlParserCamera.h>
+	<visp3/gui/vpDisplayX.h>
+	<visp3/gui/vpDisplayGDI.h>
+	<visp3/gui/vpDisplayOpenCV.h>
+	<visp3/mbt/vpMbGenericTracker.h>
+	<visp3/sensor/vpRealSense2.h>
+	<visp3/vision/vpKeyPoint.h>
+
