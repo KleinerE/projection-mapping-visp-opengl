@@ -1,7 +1,7 @@
-#include "VertexArray.h"
-#include "VertexBufferLayout.h"
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/VertexArray.h"
+#include "ogl/VertexBufferLayout.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 VertexArray::VertexArray()
 {

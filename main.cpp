@@ -4,6 +4,8 @@
 
 #include <visp3/core/vpConfig.h>
 
+#include "myGLFWRenderer.h"
+
 #if defined(VISP_HAVE_REALSENSE2) && defined(VISP_HAVE_OPENCV)
 #include <visp3/core/vpDisplay.h>
 #include <visp3/core/vpIoTools.h>
@@ -15,8 +17,18 @@
 #include <visp3/sensor/vpRealSense2.h>
 #include <visp3/vision/vpKeyPoint.h>
 
+#include <visp3/core/vpThetaUVector.h>
+
 int main(int argc, char *argv[])
 {
+//std::cout << "Hi" << std::endl;
+//myGLFWRenderer* glr = new myGLFWRenderer();
+// while (!glfwWindowShouldClose(glr->m_Window))
+// {
+//    //glm::vec3* translation = new glm::vec3( 0.0f, 0.0f, 0.0f );
+//      glr->OnRender();
+// }
+
   std::string config_color = "", config_depth = "";
   std::string model_color = "", model_depth = "";
   std::string init_file = "";
@@ -171,6 +183,9 @@ int main(int argc, char *argv[])
   if (use_depth)
     d2.init(I_depth, _posx + I_gray.getWidth()+10, _posy, "Depth stream");
 
+
+
+
   while (true) {
     realsense.acquire((unsigned char *) I_color.bitmap, (unsigned char *) I_depth_raw.bitmap, NULL, NULL);
 
@@ -307,6 +322,12 @@ int main(int argc, char *argv[])
     double loop_t = 0;
     vpHomogeneousMatrix cMo;
 
+    /***********************************************************************************************************************************************************************/
+    //RENDER
+    //std::cout << "Hello" << std::endl;
+    myGLFWRenderer* glr = new myGLFWRenderer();
+    std::cout << "GLFW Renderer Initialized" << std::endl;
+
     while (!quit) {
       double t = vpTime::measureTimeMs();
       bool tracking_failed = false;
@@ -386,7 +407,20 @@ int main(int argc, char *argv[])
 
       // Get object pose
       cMo = tracker.getPose();
+      //std::cout << "Hello" << std::endl;
+      if (!glfwWindowShouldClose(glr->m_Window))
+      {
+        glm::vec3 translation = glm::vec3(-cMo.getTranslationVector()[0], -cMo.getTranslationVector()[1], cMo.getTranslationVector()[2]);
+        glm::vec3 rotation = glm::vec3(-cMo.getThetaUVector()[0] - M_PI_2, cMo.getThetaUVector()[1], -cMo.getThetaUVector()[2]);
+        glr->OnRender(translation, rotation);
+      }
 
+
+      /*
+      std::cout << "X : " << cMo.getTranslationVector()[0] << std::endl;
+      std::cout << "Y : " << cMo.getTranslationVector()[1] << std::endl;
+      std::cout << "Z : " << cMo.getTranslationVector()[2] << std::endl;
+    */
       // Check tracking errors
       double proj_error = 0;
       if (tracker.getTrackerType() & vpMbGenericTracker::EDGE_TRACKER) {

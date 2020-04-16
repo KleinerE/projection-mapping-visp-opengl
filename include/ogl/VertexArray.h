@@ -2,7 +2,7 @@
 #define VERTEXARRAY_H
 
 
-#include "VertexBuffer.h"
+#include "ogl/VertexBuffer.h"
 
 
 class VertexBufferLayout;

@@ -1,6 +1,6 @@
-#include "Shader.h"
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/Shader.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 
 Shader::Shader(const std::string& filepath)

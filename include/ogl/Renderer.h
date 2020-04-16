@@ -4,11 +4,11 @@
 
 
 
-#include "VertexArray.h"
-#include "IndexBuffer.h"
+#include "ogl/VertexArray.h"
+#include "ogl/IndexBuffer.h"
 //#include "VertexBuffer.h"
 //#include "VertexBufferLayout.h"
-#include "Shader.h"
+#include "ogl/Shader.h"
 
 
 class Renderer

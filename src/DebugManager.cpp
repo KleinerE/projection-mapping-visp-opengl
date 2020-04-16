@@ -1,4 +1,4 @@
-#include "DebugManager.h"
+#include "ogl/DebugManager.h"
 #include  <GL/glew.h>
 
 void GLClearError()

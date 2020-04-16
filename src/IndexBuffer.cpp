@@ -1,6 +1,6 @@
-#include "IndexBuffer.h"
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/IndexBuffer.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 IndexBuffer::IndexBuffer(const unsigned int* data, unsigned int count)
 {

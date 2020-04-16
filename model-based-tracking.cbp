@@ -19,6 +19,10 @@
 					<Add directory="/usr/include/ois" />
 					<Add directory="/usr/include/pcl-1.8" />
 					<Add directory="/usr/include/eigen3" />
+					<Add directory="/home/eran-lab/Code/model-based-tracking/include" />
+					<Add directory="/usr/include/GL" />
+					<Add directory="/usr/include/GLFW" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add library="libvisp_core" />
@@ -49,6 +53,9 @@
 					<Add library="libopencv_stitching" />
 					<Add library="libboost_system" />
 					<Add library="librealsense2" />
+					<Add library="libGL" />
+					<Add library="libGLEW" />
+					<Add library="libglfw" />
 					<Add directory="/usr/local/lib" />
 					<Add directory="/usr/lib/x86_64-linux-gnu" />
 				</Linker>
@@ -60,6 +67,7 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add directory="include" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
@@ -69,7 +77,33 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/myGLFWRenderer.h" />
+		<Unit filename="include/ogl/CubeRenderer.h" />
+		<Unit filename="include/ogl/DebugManager.h" />
+		<Unit filename="include/ogl/IndexBuffer.h" />
+		<Unit filename="include/ogl/Renderer.h" />
+		<Unit filename="include/ogl/Shader.h" />
+		<Unit filename="include/ogl/Texture.h" />
+		<Unit filename="include/ogl/VertexArray.h" />
+		<Unit filename="include/ogl/VertexBuffer.h" />
+		<Unit filename="include/ogl/VertexBufferLayout.h" />
+		<Unit filename="include/ogl/stb_image.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="model/cube/cube.cao" />
+		<Unit filename="model/cube/cube.init" />
+		<Unit filename="model/cube/cube.xml" />
+		<Unit filename="model/cube/cube_depth.xml" />
+		<Unit filename="model/cube/cubemap.png" />
+		<Unit filename="src/CubeRenderer.cpp" />
+		<Unit filename="src/DebugManager.cpp" />
+		<Unit filename="src/IndexBuffer.cpp" />
+		<Unit filename="src/Renderer.cpp" />
+		<Unit filename="src/Shader.cpp" />
+		<Unit filename="src/Texture.cpp" />
+		<Unit filename="src/VertexArray.cpp" />
+		<Unit filename="src/VertexBuffer.cpp" />
+		<Unit filename="src/VertexBufferLayout.cpp" />
+		<Unit filename="src/myGLFWRenderer.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

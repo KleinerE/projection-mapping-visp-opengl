@@ -1,6 +1,6 @@
-#include "VertexBufferLayout.h"
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/VertexBufferLayout.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 VertexBufferLayout::VertexBufferLayout()
 {

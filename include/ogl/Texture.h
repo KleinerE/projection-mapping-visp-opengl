@@ -1,7 +1,7 @@
 #ifndef TEXTURE_H
 #define TEXTURE_H
 
-#include "DebugManager.h"
+#include "ogl/DebugManager.h"
 
 class Texture
 {

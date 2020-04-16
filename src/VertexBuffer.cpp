@@ -1,6 +1,6 @@
-#include "VertexBuffer.h"
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/VertexBuffer.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 /*
 VertexBuffer::VertexBuffer()

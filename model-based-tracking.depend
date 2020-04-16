@@ -1,7 +1,8 @@
 # depslib dependency file v1.0
-1586265919 source:/home/eran-lab/Code/model-based-tracking/main.cpp
+1587053537 source:/home/eran-lab/Code/model-based-tracking/main.cpp
 	<iostream>
 	<visp3/core/vpConfig.h>
+	"myGLFWRenderer.h"
 	<visp3/core/vpDisplay.h>
 	<visp3/core/vpIoTools.h>
 	<visp3/core/vpXmlParserCamera.h>
@@ -11,4 +12,921 @@
 	<visp3/mbt/vpMbGenericTracker.h>
 	<visp3/sensor/vpRealSense2.h>
 	<visp3/vision/vpKeyPoint.h>
+	<visp3/core/vpThetaUVector.h>
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<ctype.h>
+	<stdio.h>
+	<stddef.h>
+	<stdint.h>
+	<Windows.h>
+	<windows.h>
+	<TargetConditionals.h>
+	"stb_sprintf.h"
+	<Carbon/Carbon.h>
+	<imm.h>
+	"imgui_user.inl"
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imgui.h
+	"imconfig.h"
+	<float.h>
+	<stdarg.h>
+	<stddef.h>
+	<string.h>
+	<assert.h>
+	<stdint.h>
+	"imgui_user.h"
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imconfig.h
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imgui_internal.h
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	<limits.h>
+	"imstb_textedit.h"
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imstb_textedit.h
+	<string.h>
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui_demo.cpp
+	"imgui.h"
+	<ctype.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<stddef.h>
+	<stdint.h>
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui_draw.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<stdio.h>
+	<alloca.h>
+	<malloc.h>
+	<stdlib.h>
+	"imstb_rectpack.h"
+	"imstb_truetype.h"
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imstb_rectpack.h
+	<stdlib.h>
+	<assert.h>
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imstb_truetype.h
+	"stb_truetype.h"
+	<stdio.h>
+	"stb_truetype.h"
+	<math.h>
+	<math.h>
+	<math.h>
+	<math.h>
+	<math.h>
+	<stdlib.h>
+	<assert.h>
+	<string.h>
+	<string.h>
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui_impl_glfw.cpp
+	"imgui.h"
+	"imgui_impl_glfw.h"
+	<GLFW/glfw3.h>
+	<GLFW/glfw3native.h>
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imgui_impl_glfw.h
+	"imgui.h"
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui_impl_opengl3.cpp
+	"imgui.h"
+	"imgui_impl_opengl3.h"
+	<stdio.h>
+	<stddef.h>
+	<stdint.h>
+	"TargetConditionals.h"
+	<GLES2/gl2.h>
+	<OpenGLES/ES3/gl.h>
+	<GLES3/gl3.h>
+	<GL/gl3w.h>
+	<GL/glew.h>
+	<glad/glad.h>
+	<glbinding/Binding.h>
+	<glbinding/gl/gl.h>
+	<glbinding/glbinding.h>
+	<glbinding/gl/gl.h>
+
+1586855030 /home/eran-lab/Code/model-based-tracking/include/imgui/imgui_impl_opengl3.h
+	"imgui.h"
+
+1586855030 source:/home/eran-lab/Code/model-based-tracking/include/imgui/imgui_widgets.cpp
+	"imgui.h"
+	"imgui_internal.h"
+	<ctype.h>
+	<stddef.h>
+	<stdint.h>
+	"imstb_textedit.h"
+
+1587053130 source:/home/eran-lab/Code/model-based-tracking/src/CubeRenderer.cpp
+	"ogl/CubeRenderer.h"
+	<GL/glew.h>
+	"ogl/DebugManager.h"
+
+1587053036 /home/eran-lab/Code/model-based-tracking/include/ogl/CubeRenderer.h
+	"ogl/Renderer.h"
+	"ogl/VertexBufferLayout.h"
+	"ogl/Texture.h"
+	<GLFW/glfw3.h>
+	<iostream>
+	"glm/glm.hpp"
+	"glm/gtc/matrix_transform.hpp"
+
+1587037964 /home/eran-lab/Code/model-based-tracking/include/ogl/Renderer.h
+	"ogl/VertexArray.h"
+	"ogl/IndexBuffer.h"
+	"ogl/Shader.h"
+
+1587037978 /home/eran-lab/Code/model-based-tracking/include/ogl/VertexArray.h
+	"ogl/VertexBuffer.h"
+
+1586875226 /home/eran-lab/Code/model-based-tracking/include/ogl/VertexBuffer.h
+
+1586709743 /home/eran-lab/Code/model-based-tracking/include/ogl/IndexBuffer.h
+
+1586795216 /home/eran-lab/Code/model-based-tracking/include/ogl/Shader.h
+	<string>
+	<fstream>
+	<sstream>
+	<unordered_map>
+	<glm/glm.hpp>
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/glm.hpp
+	"detail/_fixes.hpp"
+	"detail/setup.hpp"
+	<cmath>
+	<climits>
+	<cfloat>
+	<limits>
+	<cassert>
+	"fwd.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"trigonometric.hpp"
+	"exponential.hpp"
+	"common.hpp"
+	"packing.hpp"
+	"geometric.hpp"
+	"matrix.hpp"
+	"vector_relational.hpp"
+	"integer.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/_fixes.hpp
+	<cmath>
+
+1572709517 /home/eran-lab/Code/model-based-tracking/include/glm/detail/setup.hpp
+	<cassert>
+	<cstddef>
+	"../simd/platform.h"
+	<CL/sycl.hpp>
+	<limits>
+	<cstdint>
+	<type_traits>
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/simd/platform.h
+	<cuda.h>
+	<immintrin.h>
+	<immintrin.h>
+	<popcntintrin.h>
+	<nmmintrin.h>
+	<smmintrin.h>
+	<tmmintrin.h>
+	<pmmintrin.h>
+	<emmintrin.h>
+	"neon.h"
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/simd/neon.h
+	<arm_neon.h>
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/fwd.hpp
+	"detail/qualifier.hpp"
+
+1567847179 /home/eran-lab/Code/model-based-tracking/include/glm/detail/qualifier.hpp
+	"setup.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/vec2.hpp
+	"./ext/vector_bool2.hpp"
+	"./ext/vector_bool2_precision.hpp"
+	"./ext/vector_float2.hpp"
+	"./ext/vector_float2_precision.hpp"
+	"./ext/vector_double2.hpp"
+	"./ext/vector_double2_precision.hpp"
+	"./ext/vector_int2.hpp"
+	"./ext/vector_int2_precision.hpp"
+	"./ext/vector_uint2.hpp"
+	"./ext/vector_uint2_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool2.hpp
+	"../detail/type_vec2.hpp"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec2.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec2.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/_swizzle.hpp
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/_swizzle_func.hpp
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec2.inl
+	"./compute_vector_relational.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/compute_vector_relational.hpp
+	"setup.hpp"
+	<limits>
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float2.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double2.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int2.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint2.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint2_precision.hpp
+	"../detail/type_vec2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/vec3.hpp
+	"./ext/vector_bool3.hpp"
+	"./ext/vector_bool3_precision.hpp"
+	"./ext/vector_float3.hpp"
+	"./ext/vector_float3_precision.hpp"
+	"./ext/vector_double3.hpp"
+	"./ext/vector_double3_precision.hpp"
+	"./ext/vector_int3.hpp"
+	"./ext/vector_int3_precision.hpp"
+	"./ext/vector_uint3.hpp"
+	"./ext/vector_uint3_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool3.hpp
+	"../detail/type_vec3.hpp"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec3.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec3.inl"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec3.inl
+	"compute_vector_relational.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float3.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double3.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int3.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint3.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint3_precision.hpp
+	"../detail/type_vec3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/vec4.hpp
+	"./ext/vector_bool4.hpp"
+	"./ext/vector_bool4_precision.hpp"
+	"./ext/vector_float4.hpp"
+	"./ext/vector_float4_precision.hpp"
+	"./ext/vector_double4.hpp"
+	"./ext/vector_double4_precision.hpp"
+	"./ext/vector_int4.hpp"
+	"./ext/vector_int4_precision.hpp"
+	"./ext/vector_uint4.hpp"
+	"./ext/vector_uint4_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool4.hpp
+	"../detail/type_vec4.hpp"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec4.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec4.inl"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec4.inl
+	"compute_vector_relational.hpp"
+	"type_vec4_simd.inl"
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec4_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_bool4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float4.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_float4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double4.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_double4_precision.hpp
+	"../detail/setup.hpp"
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int4.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_int4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint4.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_uint4_precision.hpp
+	"../detail/type_vec4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat2x2.hpp
+	"./ext/matrix_double2x2.hpp"
+	"./ext/matrix_double2x2_precision.hpp"
+	"./ext/matrix_float2x2.hpp"
+	"./ext/matrix_float2x2_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x2.hpp
+	"../detail/type_mat2x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x2.hpp
+	"type_vec2.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x2.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x2.inl
+	"../matrix.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/matrix.hpp
+	"detail/qualifier.hpp"
+	"detail/setup.hpp"
+	"vec2.hpp"
+	"vec3.hpp"
+	"vec4.hpp"
+	"mat2x2.hpp"
+	"mat2x3.hpp"
+	"mat2x4.hpp"
+	"mat3x2.hpp"
+	"mat3x3.hpp"
+	"mat3x4.hpp"
+	"mat4x2.hpp"
+	"mat4x3.hpp"
+	"mat4x4.hpp"
+	"detail/func_matrix.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat2x3.hpp
+	"./ext/matrix_double2x3.hpp"
+	"./ext/matrix_double2x3_precision.hpp"
+	"./ext/matrix_float2x3.hpp"
+	"./ext/matrix_float2x3_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x3.hpp
+	"../detail/type_mat2x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x3.hpp
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x3.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x3.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x3_precision.hpp
+	"../detail/type_mat2x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x3.hpp
+	"../detail/type_mat2x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x3_precision.hpp
+	"../detail/type_mat2x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat2x4.hpp
+	"./ext/matrix_double2x4.hpp"
+	"./ext/matrix_double2x4_precision.hpp"
+	"./ext/matrix_float2x4.hpp"
+	"./ext/matrix_float2x4_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x4.hpp
+	"../detail/type_mat2x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x4.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat2x4.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat2x4.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x4_precision.hpp
+	"../detail/type_mat2x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x4.hpp
+	"../detail/type_mat2x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x4_precision.hpp
+	"../detail/type_mat2x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat3x2.hpp
+	"./ext/matrix_double3x2.hpp"
+	"./ext/matrix_double3x2_precision.hpp"
+	"./ext/matrix_float3x2.hpp"
+	"./ext/matrix_float3x2_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x2.hpp
+	"../detail/type_mat3x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x2.hpp
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x2.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x2.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x2_precision.hpp
+	"../detail/type_mat3x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x2.hpp
+	"../detail/type_mat3x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x2_precision.hpp
+	"../detail/type_mat3x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat3x3.hpp
+	"./ext/matrix_double3x3.hpp"
+	"./ext/matrix_double3x3_precision.hpp"
+	"./ext/matrix_float3x3.hpp"
+	"./ext/matrix_float3x3_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x3.hpp
+	"../detail/type_mat3x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x3.hpp
+	"type_vec3.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x3.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x3.inl
+	"../matrix.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x3_precision.hpp
+	"../detail/type_mat3x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x3.hpp
+	"../detail/type_mat3x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x3_precision.hpp
+	"../detail/type_mat3x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat3x4.hpp
+	"./ext/matrix_double3x4.hpp"
+	"./ext/matrix_double3x4_precision.hpp"
+	"./ext/matrix_float3x4.hpp"
+	"./ext/matrix_float3x4_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x4.hpp
+	"../detail/type_mat3x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x4.hpp
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat3x4.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat3x4.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double3x4_precision.hpp
+	"../detail/type_mat3x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x4.hpp
+	"../detail/type_mat3x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float3x4_precision.hpp
+	"../detail/type_mat3x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat4x2.hpp
+	"./ext/matrix_double4x2.hpp"
+	"./ext/matrix_double4x2_precision.hpp"
+	"./ext/matrix_float4x2.hpp"
+	"./ext/matrix_float4x2_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x2.hpp
+	"../detail/type_mat4x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x2.hpp
+	"type_vec2.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x2.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x2.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x2_precision.hpp
+	"../detail/type_mat4x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x2.hpp
+	"../detail/type_mat4x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat4x3.hpp
+	"./ext/matrix_double4x3.hpp"
+	"./ext/matrix_double4x3_precision.hpp"
+	"./ext/matrix_float4x3.hpp"
+	"./ext/matrix_float4x3_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x3.hpp
+	"../detail/type_mat4x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x3.hpp
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x3.inl"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x3.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x3_precision.hpp
+	"../detail/type_mat4x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x3.hpp
+	"../detail/type_mat4x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x3_precision.hpp
+	"../detail/type_mat4x3.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/mat4x4.hpp
+	"./ext/matrix_double4x4.hpp"
+	"./ext/matrix_double4x4_precision.hpp"
+	"./ext/matrix_float4x4.hpp"
+	"./ext/matrix_float4x4_precision.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x4.hpp
+	"../detail/type_mat4x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x4.hpp
+	"type_vec4.hpp"
+	<limits>
+	<cstddef>
+	"type_mat4x4.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x4.inl
+	"../matrix.hpp"
+	"type_mat4x4_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_mat4x4_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double4x4_precision.hpp
+	"../detail/type_mat4x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x4.hpp
+	"../detail/type_mat4x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float4x4_precision.hpp
+	"../detail/type_mat4x4.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_matrix.inl
+	"../geometric.hpp"
+	<limits>
+	"func_matrix_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/geometric.hpp
+	"detail/type_vec3.hpp"
+	"detail/func_geometric.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_geometric.inl
+	"../exponential.hpp"
+	"../common.hpp"
+	"func_geometric_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/exponential.hpp
+	"detail/type_vec1.hpp"
+	"detail/type_vec2.hpp"
+	"detail/type_vec3.hpp"
+	"detail/type_vec4.hpp"
+	<cmath>
+	"detail/func_exponential.inl"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec1.hpp
+	"qualifier.hpp"
+	"_swizzle.hpp"
+	"_swizzle_func.hpp"
+	<cstddef>
+	"type_vec1.inl"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_vec1.inl
+	"./compute_vector_relational.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_exponential.inl
+	"../vector_relational.hpp"
+	"_vectorize.hpp"
+	<limits>
+	<cmath>
+	<cassert>
+	"func_exponential_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/vector_relational.hpp
+	"detail/qualifier.hpp"
+	"detail/setup.hpp"
+	"detail/func_vector_relational.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_vector_relational.inl
+	"func_vector_relational_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_vector_relational_simd.inl
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/detail/_vectorize.hpp
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_exponential_simd.inl
+	"../simd/exponential.h"
+
+1536009986 /home/eran-lab/Code/model-based-tracking/include/glm/simd/exponential.h
+	"platform.h"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/common.hpp
+	"detail/qualifier.hpp"
+	"detail/_fixes.hpp"
+	"detail/func_common.inl"
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_common.inl
+	"../vector_relational.hpp"
+	"compute_common.hpp"
+	"type_vec1.hpp"
+	"type_vec2.hpp"
+	"type_vec3.hpp"
+	"type_vec4.hpp"
+	"_vectorize.hpp"
+	<limits>
+	"func_common_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/compute_common.hpp
+	"setup.hpp"
+	<limits>
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_common_simd.inl
+	"../simd/common.h"
+	<immintrin.h>
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/simd/common.h
+	"platform.h"
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_geometric_simd.inl
+	"../simd/geometric.h"
+
+1525773267 /home/eran-lab/Code/model-based-tracking/include/glm/simd/geometric.h
+	"common.h"
+
+1578231856 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_matrix_simd.inl
+	"type_mat4x4.hpp"
+	"../geometric.hpp"
+	"../simd/matrix.h"
+	<cstring>
+
+1525773267 /home/eran-lab/Code/model-based-tracking/include/glm/simd/matrix.h
+	"geometric.h"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_double2x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x2.hpp
+	"../detail/type_mat2x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_float2x2_precision.hpp
+	"../detail/type_mat2x2.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/trigonometric.hpp
+	"detail/setup.hpp"
+	"detail/qualifier.hpp"
+	"detail/func_trigonometric.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_trigonometric.inl
+	"_vectorize.hpp"
+	<cmath>
+	<limits>
+	"func_trigonometric_simd.inl"
+
+1483566163 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_trigonometric_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/packing.hpp
+	"./ext/vector_uint2.hpp"
+	"./ext/vector_float2.hpp"
+	"./ext/vector_float4.hpp"
+	"detail/func_packing.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_packing.inl
+	"../common.hpp"
+	"type_half.hpp"
+	"func_packing_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_half.hpp
+	"setup.hpp"
+	"type_half.inl"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_half.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_packing_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/integer.hpp
+	"detail/qualifier.hpp"
+	"common.hpp"
+	"vector_relational.hpp"
+	"detail/func_integer.inl"
+
+1567860454 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_integer.inl
+	"_vectorize.hpp"
+	<intrin.h>
+	<limits>
+	"func_integer_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/func_integer_simd.inl
+	"../simd/integer.h"
+
+1525773267 /home/eran-lab/Code/model-based-tracking/include/glm/simd/integer.h
+
+1587037983 /home/eran-lab/Code/model-based-tracking/include/ogl/VertexBufferLayout.h
+	<vector>
+	<GL/glew.h>
+
+1587037973 /home/eran-lab/Code/model-based-tracking/include/ogl/Texture.h
+	"ogl/DebugManager.h"
+
+1586772144 /home/eran-lab/Code/model-based-tracking/include/ogl/DebugManager.h
+	<iostream>
+	<assert.h>
+	<GL/glew.h>
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/matrix_transform.hpp
+	"../mat4x4.hpp"
+	"../vec2.hpp"
+	"../vec3.hpp"
+	"../vec4.hpp"
+	"../ext/matrix_projection.hpp"
+	"../ext/matrix_clip_space.hpp"
+	"../ext/matrix_transform.hpp"
+	"matrix_transform.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_projection.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_projection.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/constants.hpp
+	"../ext/scalar_constants.hpp"
+	"constants.inl"
+
+1572690351 /home/eran-lab/Code/model-based-tracking/include/glm/ext/scalar_constants.hpp
+	"../detail/setup.hpp"
+	"scalar_constants.inl"
+
+1572690351 /home/eran-lab/Code/model-based-tracking/include/glm/ext/scalar_constants.inl
+	<limits>
+
+1572690351 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/constants.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_projection.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_clip_space.hpp
+	"../ext/scalar_constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"matrix_clip_space.inl"
+
+1578234323 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_clip_space.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_transform.hpp
+	"../gtc/constants.hpp"
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+	"matrix_transform.inl"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/ext/matrix_transform.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/matrix_transform.inl
+	"../geometric.hpp"
+	"../trigonometric.hpp"
+	"../matrix.hpp"
+
+1587037871 source:/home/eran-lab/Code/model-based-tracking/src/DebugManager.cpp
+	"ogl/DebugManager.h"
+	<GL/glew.h>
+
+1587037882 source:/home/eran-lab/Code/model-based-tracking/src/IndexBuffer.cpp
+	"ogl/IndexBuffer.h"
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587037893 source:/home/eran-lab/Code/model-based-tracking/src/Renderer.cpp
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587037900 source:/home/eran-lab/Code/model-based-tracking/src/Shader.cpp
+	"ogl/Shader.h"
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587038122 source:/home/eran-lab/Code/model-based-tracking/src/Texture.cpp
+	"ogl/Texture.h"
+	"ogl/stb_image.h"
+
+1586776355 /home/eran-lab/Code/model-based-tracking/include/ogl/stb_image.h
+	"stb_image.h"
+	<stdio.h>
+	<stdlib.h>
+	<stdarg.h>
+	<stddef.h>
+	<stdlib.h>
+	<string.h>
+	<limits.h>
+	<math.h>
+	<stdio.h>
+	<assert.h>
+	<stdint.h>
+	<emmintrin.h>
+	<intrin.h>
+	<arm_neon.h>
+
+1587037913 source:/home/eran-lab/Code/model-based-tracking/src/VertexArray.cpp
+	"ogl/VertexArray.h"
+	"ogl/VertexBufferLayout.h"
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587045876 source:/home/eran-lab/Code/model-based-tracking/src/VertexBuffer.cpp
+	"ogl/VertexBuffer.h"
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587037937 source:/home/eran-lab/Code/model-based-tracking/src/VertexBufferLayout.cpp
+	"ogl/VertexBufferLayout.h"
+	"ogl/Renderer.h"
+	"ogl/DebugManager.h"
+
+1587053090 /home/eran-lab/Code/model-based-tracking/include/myGLFWRenderer.h
+	"ogl/CubeRenderer.h"
+
+1587057044 source:/home/eran-lab/Code/model-based-tracking/src/myGLFWRenderer.cpp
+	"myGLFWRenderer.h"
 

@@ -1,5 +1,5 @@
-#include "Renderer.h"
-#include "DebugManager.h"
+#include "ogl/Renderer.h"
+#include "ogl/DebugManager.h"
 
 Renderer::Renderer()
 {
