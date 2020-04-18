@@ -45,6 +45,9 @@
             glm::mat4 m_Translation, m_Scale, m_Orientation;
             glm::vec3 m_TranslationVec;
 
+            glm::mat4 m_Procam_R;
+            glm::vec3 m_Procam_T;
+
     };
 
 

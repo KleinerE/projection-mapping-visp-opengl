@@ -56,14 +56,17 @@
             m_VertexBuffer(m_VertPositions, sizeof(m_VertPositions)),
             m_IndexBuffer(m_VertIndices, (int)(sizeof(m_VertIndices)/sizeof(*m_VertIndices))),
             m_Shader("model/cube/Cube.shader"),
-            m_Texture("model/cube/cubemap.png"),
+            m_Texture("model/cube/cubemap-wr.png"),
             //m_MatProj           {   glm::perspective(glm::radians(70.0f), 4.f/3.f, 0.01f, 10.0f) },
             m_MatProj           {   glm::perspective(42.0f, 16.f/9.f, 0.01f, 10.0f) },
             //m_MatView           {   glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f)) },
             m_MatView           {   glm::lookAt(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 5.0f), glm::vec3(0.0f, 1.0f, 0.0f)) },
             m_Translation       {   glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f)) },
             m_Orientation       {   glm::eulerAngleXYZ(0.0f, 0.0f, 0.0f) },
-            m_Scale             {   glm::scale(glm::mat4(1.0f), glm::vec3(0.092f, 0.092f, 0.022f)) }
+            m_Scale             {   glm::scale(glm::mat4(1.0f), glm::vec3(0.092f, 0.092f, 0.022f)) },
+
+            m_Procam_R          {   glm::mat4(1.0f)},
+            m_Procam_T          {   glm::vec3(-0.0471192f, -0.0262709f, 0.0220152f)}
     {
         //ctor
         m_VertexLayout.Push(GL_FLOAT, 3);
@@ -73,6 +76,20 @@
         m_Texture.Bind(0);
         m_Shader.SetUniform1i("u_Texture", 0);
         std::cout << "Initialized CubeRenderer" << std::endl;
+
+        glm::mat4 rmat = glm::mat4(1.0f);
+        rmat[0][0] =  0.9985f;
+        rmat[0][1] = -0.0040f;
+        rmat[0][2] = -0.0037f;
+        rmat[1][0] =  0.0038f;
+        rmat[1][1] =  0.9970f;
+        rmat[1][2] = -0.0067f;
+        rmat[2][0] =  0.0039f;
+        rmat[2][1] =  0.0066f;
+        rmat[2][2] =  0.9971f;
+        m_Procam_R = glm::transpose(rmat);
+        glm::mat4 tmat = glm::translate(glm::mat4(1.0), m_Procam_T);
+        m_MatView = tmat * rmat * m_MatView;
 
         m_Renderer.Clear();
     }
