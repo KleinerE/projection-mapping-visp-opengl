@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587053537 source:/home/eran-lab/Code/model-based-tracking/main.cpp
+1587207855 source:/home/eran-lab/Code/model-based-tracking/main.cpp
 	<iostream>
 	<visp3/core/vpConfig.h>
 	"myGLFWRenderer.h"
@@ -127,12 +127,14 @@
 	<stdint.h>
 	"imstb_textedit.h"
 
-1587053130 source:/home/eran-lab/Code/model-based-tracking/src/CubeRenderer.cpp
+1587207025 source:/home/eran-lab/Code/model-based-tracking/src/CubeRenderer.cpp
 	"ogl/CubeRenderer.h"
 	<GL/glew.h>
 	"ogl/DebugManager.h"
+	"imgui/imgui.h"
+	"glm/gtx/euler_angles.hpp"
 
-1587053036 /home/eran-lab/Code/model-based-tracking/include/ogl/CubeRenderer.h
+1587205769 /home/eran-lab/Code/model-based-tracking/include/ogl/CubeRenderer.h
 	"ogl/Renderer.h"
 	"ogl/VertexBufferLayout.h"
 	"ogl/Texture.h"
@@ -140,6 +142,7 @@
 	<iostream>
 	"glm/glm.hpp"
 	"glm/gtc/matrix_transform.hpp"
+	"glm/gtx/quaternion.hpp"
 
 1587037964 /home/eran-lab/Code/model-based-tracking/include/ogl/Renderer.h
 	"ogl/VertexArray.h"
@@ -924,9 +927,198 @@
 	"ogl/Renderer.h"
 	"ogl/DebugManager.h"
 
-1587053090 /home/eran-lab/Code/model-based-tracking/include/myGLFWRenderer.h
+1587202980 /home/eran-lab/Code/model-based-tracking/include/myGLFWRenderer.h
 	"ogl/CubeRenderer.h"
 
-1587057044 source:/home/eran-lab/Code/model-based-tracking/src/myGLFWRenderer.cpp
+1587221393 source:/home/eran-lab/Code/model-based-tracking/src/myGLFWRenderer.cpp
 	"myGLFWRenderer.h"
+	"imgui/imgui.h"
+	"imgui/imgui_impl_glfw.h"
+	"imgui/imgui_impl_opengl3.h"
+
+1573046839 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/quaternion.hpp
+	"../glm.hpp"
+	"../gtc/constants.hpp"
+	"../gtc/quaternion.hpp"
+	"../ext/quaternion_exponential.hpp"
+	"../gtx/norm.hpp"
+	"quaternion.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/quaternion.hpp
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_common.hpp"
+	"../ext/quaternion_float.hpp"
+	"../ext/quaternion_float_precision.hpp"
+	"../ext/quaternion_double.hpp"
+	"../ext/quaternion_double_precision.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../ext/quaternion_trigonometric.hpp"
+	"../ext/quaternion_transform.hpp"
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"quaternion.inl"
+
+1567868987 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_relational.hpp
+	"../detail/qualifier.hpp"
+	"vector_relational.inl"
+
+1539729779 /home/eran-lab/Code/model-based-tracking/include/glm/ext/vector_relational.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+	"../detail/qualifier.hpp"
+	"../detail/type_float.hpp"
+
+1539729778 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_float.hpp
+	"setup.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_common.hpp
+	"../ext/scalar_constants.hpp"
+	"../ext/quaternion_geometric.hpp"
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	<limits>
+	"quaternion_common.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_geometric.hpp
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"../ext/vector_relational.hpp"
+	"quaternion_geometric.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_geometric.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_common.inl
+	"quaternion_common_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_common_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_float.hpp
+	"../detail/type_quat.hpp"
+
+1578255546 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_quat.hpp
+	"../detail/type_mat3x3.hpp"
+	"../detail/type_mat4x4.hpp"
+	"../detail/type_vec3.hpp"
+	"../detail/type_vec4.hpp"
+	"../ext/vector_relational.hpp"
+	"../ext/quaternion_relational.hpp"
+	"../gtc/constants.hpp"
+	"../gtc/matrix_transform.hpp"
+	"type_quat.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_relational.hpp
+	"../vector_relational.hpp"
+	"quaternion_relational.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_relational.inl
+
+1578254714 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_quat.inl
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"../ext/quaternion_geometric.hpp"
+	<limits>
+	"type_quat_simd.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/detail/type_quat_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_float_precision.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_double.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_double_precision.hpp
+	"../detail/type_quat.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_trigonometric.hpp
+	"../trigonometric.hpp"
+	"../exponential.hpp"
+	"scalar_constants.hpp"
+	"vector_relational.hpp"
+	<limits>
+	"quaternion_trigonometric.inl"
+
+1572690351 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_trigonometric.inl
+	"scalar_constants.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_transform.hpp
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"quaternion_transform.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_transform.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/quaternion.inl
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../exponential.hpp"
+	"epsilon.hpp"
+	<limits>
+	"quaternion_simd.inl"
+
+1536009986 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/epsilon.hpp
+	"../detail/setup.hpp"
+	"../detail/qualifier.hpp"
+	"epsilon.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/epsilon.inl
+	"../vector_relational.hpp"
+	"../common.hpp"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtc/quaternion_simd.inl
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_exponential.hpp
+	"../common.hpp"
+	"../trigonometric.hpp"
+	"../geometric.hpp"
+	"../ext/scalar_constants.hpp"
+	"quaternion_exponential.inl"
+
+1572690351 /home/eran-lab/Code/model-based-tracking/include/glm/ext/quaternion_exponential.inl
+	"scalar_constants.hpp"
+
+1567847801 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/norm.hpp
+	"../geometric.hpp"
+	"../gtx/quaternion.hpp"
+	"../gtx/component_wise.hpp"
+	"norm.inl"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/component_wise.hpp
+	"../detail/setup.hpp"
+	"../detail/qualifier.hpp"
+	"component_wise.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/component_wise.inl
+	<limits>
+
+1567847801 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/norm.inl
+	"../detail/qualifier.hpp"
+
+1573046823 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/quaternion.inl
+	<limits>
+	"../gtc/constants.hpp"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/euler_angles.hpp
+	"../glm.hpp"
+	"euler_angles.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/euler_angles.inl
+	"compatibility.hpp"
+
+1567838739 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/compatibility.hpp
+	"../glm.hpp"
+	"../gtc/quaternion.hpp"
+	<cfloat>
+	<cmath>
+	"compatibility.inl"
+
+1536012170 /home/eran-lab/Code/model-based-tracking/include/glm/gtx/compatibility.inl
+	<limits>
 

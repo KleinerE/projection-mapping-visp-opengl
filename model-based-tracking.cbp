@@ -77,6 +77,20 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/imgui/imconfig.h" />
+		<Unit filename="include/imgui/imgui.cpp" />
+		<Unit filename="include/imgui/imgui.h" />
+		<Unit filename="include/imgui/imgui_demo.cpp" />
+		<Unit filename="include/imgui/imgui_draw.cpp" />
+		<Unit filename="include/imgui/imgui_impl_glfw.cpp" />
+		<Unit filename="include/imgui/imgui_impl_glfw.h" />
+		<Unit filename="include/imgui/imgui_impl_opengl3.cpp" />
+		<Unit filename="include/imgui/imgui_impl_opengl3.h" />
+		<Unit filename="include/imgui/imgui_internal.h" />
+		<Unit filename="include/imgui/imgui_widgets.cpp" />
+		<Unit filename="include/imgui/imstb_rectpack.h" />
+		<Unit filename="include/imgui/imstb_textedit.h" />
+		<Unit filename="include/imgui/imstb_truetype.h" />
 		<Unit filename="include/myGLFWRenderer.h" />
 		<Unit filename="include/ogl/CubeRenderer.h" />
 		<Unit filename="include/ogl/DebugManager.h" />

@@ -1,7 +1,9 @@
 #include "ogl/CubeRenderer.h"
 #include <GL/glew.h>
 #include "ogl/DebugManager.h"
-//#include "imgui.h"
+
+#include "imgui/imgui.h"
+#include "glm/gtx/euler_angles.hpp"
 
 
 
@@ -59,10 +61,9 @@
             m_MatProj           {   glm::perspective(42.0f, 16.f/9.f, 0.01f, 10.0f) },
             //m_MatView           {   glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f)) },
             m_MatView           {   glm::lookAt(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f, 0.0f, 5.0f), glm::vec3(0.0f, 1.0f, 0.0f)) },
-            m_Translation       {   glm::vec3(0.0f, 0.0f, 0.0f) },
-            m_RotationAngles    {   glm::vec3(0.0f, 0.0f, 0.0f) },
-            m_Scale             {   glm::vec3(0.092f, 0.092f, 0.022f) }
-            //m_Window {window}
+            m_Translation       {   glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, 0.0f)) },
+            m_Orientation       {   glm::eulerAngleXYZ(0.0f, 0.0f, 0.0f) },
+            m_Scale             {   glm::scale(glm::mat4(1.0f), glm::vec3(0.092f, 0.092f, 0.022f)) }
     {
         //ctor
         m_VertexLayout.Push(GL_FLOAT, 3);
@@ -73,12 +74,7 @@
         m_Shader.SetUniform1i("u_Texture", 0);
         std::cout << "Initialized CubeRenderer" << std::endl;
 
-        //m_Renderer.Clear();
-        GLCALL(glColorMask(GL_TRUE, GL_TRUE, GL_TRUE, GL_TRUE));
-        GLCALL(glDepthMask(GL_TRUE));
-        GLCALL(glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT));
-        GLCALL(glClearColor(0.0f, 0.0f, 0.0f, 1.0f));
-
+        m_Renderer.Clear();
     }
 
     CubeRenderer::~CubeRenderer()
@@ -95,39 +91,40 @@
 
     }
 */
-    void CubeRenderer::OnRender(glm::vec3 translation, glm::vec3 rotation)
+    void CubeRenderer::OnRender()
     {
-        //std::cout << translation[0] << std::endl;
         m_Renderer.Clear();
         GLCALL(glClearColor(0.5f, 0.7f, 1.0f, 1.0f));
+
         m_Shader.Bind();
 
         {
-            //glm::vec3 rotation = glm::vec3(0.0f, 0.0f, 0.0f);
-            //glm::vec3 translation = glm::vec3(0.0f, 0.0f, 2.0f);
-            glm::mat4 model =   glm::scale(glm::rotate(glm::rotate(glm::rotate(glm::translate(glm::mat4(1.0f), translation),
-                                                                                rotation.x, glm::vec3(1.0f, 0.0f, 0.0f)),
-                                                                    rotation.y, glm::vec3(0.0f, 1.0f, 0.0f)),
-                                                        rotation.z, glm::vec3(0.0f, 0.0f, 1.0f)),
+        /*
+            glm::mat4 model =   glm::scale(glm::rotate(glm::rotate(glm::rotate(glm::translate(glm::mat4(1.0f), m_Translation),
+                                                                                m_Rotation.x, glm::vec3(1.0f, 0.0f, 0.0f)),
+                                                                    m_Rotation.y, glm::vec3(0.0f, 1.0f, 0.0f)),
+                                                        m_Rotation.z, glm::vec3(0.0f, 0.0f, 1.0f)),
                                             m_Scale);
+        */
+            glm::mat4 model = m_Translation * m_Orientation * m_Scale;
             glm::mat4 mvp = m_MatProj * m_MatView * model;
             m_Shader.SetUniformMat4f("u_MVP", mvp);
             m_Renderer.Draw(m_VertexArray, m_IndexBuffer, m_Shader);
         }
-
     }
-/*
+
     void CubeRenderer::OnImGuiRender()
     {
-        ImGui::Begin("Hello, world!");                          // Create a window called "Hello, world!" and append into it.
-        ImGui::SliderFloat3("translation", &m_Translation.x, -5.0f, 5.0f);
-        ImGui::SliderFloat3("rotation", &m_RotationAngles.x, -5.0f, 5.0f);
-        ImGui::SliderFloat3("scale", &m_Scale.x, 0.1f, 5.0f);
+
+        ImGui::Begin("Cube Transform");                          // Create a window called "Hello, world!" and append into it.
+        ImGui::SliderFloat3("translation", &m_TranslationVec.x, -.3f, .3f);
+        //ImGui::SliderFloat4("rotation", &m_Orientation.x, -5.0f, 5.0f);
+        //ImGui::SliderFloat3("scale", &m_Scale.x, 0.1f, 5.0f);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
         ImGui::End();
     }
-
+/*
     void CubeRenderer::OnDestruct()
     {
         m_Renderer.Clear();
@@ -135,4 +132,15 @@
         delete this;
     }
 */
+    void CubeRenderer::SetTransform(glm::vec3 translation, glm::vec3 euler)
+    {
+        m_Translation = glm::translate(glm::mat4(1.0f), translation);
+        glm::mat4 Rx = glm::eulerAngleX(euler.x);
+        glm::mat4 Ry = glm::eulerAngleY(euler.y);
+        glm::mat4 Rz = glm::eulerAngleZ(euler.z);
+        m_Orientation = Rz * Ry * Rx;
+
+        //For Debug Purposes
+        m_TranslationVec = translation;
+    }
 //}

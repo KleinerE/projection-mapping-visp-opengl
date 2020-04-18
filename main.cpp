@@ -408,12 +408,19 @@ int main(int argc, char *argv[])
       // Get object pose
       cMo = tracker.getPose();
       //std::cout << "Hello" << std::endl;
+
+      float deltaxy = 0.046;
+      float deltaz = 0.011;
       if (!glfwWindowShouldClose(glr->m_Window))
       {
-        glm::vec3 translation = glm::vec3(-cMo.getTranslationVector()[0], -cMo.getTranslationVector()[1], cMo.getTranslationVector()[2]);
-        glm::vec3 rotation = glm::vec3(-cMo.getThetaUVector()[0] - M_PI_2, cMo.getThetaUVector()[1], -cMo.getThetaUVector()[2]);
-        glr->OnRender(translation, rotation);
+        glm::vec3 translation = glm::vec3(cMo.getTranslationVector()[0] - deltaxy, cMo.getTranslationVector()[1] - deltaxy, cMo.getTranslationVector()[2] + deltaz);
+        vpRzyxVector r;
+        r.buildFrom(cMo.getRotationMatrix());
+        glm::vec3 euler = glm::vec3(r[2] - M_PI_2, r[1], r[0]);
+        glr->OnRender(translation, euler);
       }
+      else
+        quit = true;
 
 
       /*
