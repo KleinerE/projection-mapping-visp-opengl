@@ -6,7 +6,6 @@
 #include "ogl/VertexBufferLayout.h"
 #include "ogl/Texture.h"
 
-#include <GLFW/glfw3.h>
 #include <iostream>
 
 #include "glm/glm.hpp"
@@ -26,7 +25,11 @@
             void OnImGuiRender();
 
             void SetTransform(glm::vec3 translation, glm::vec3 euler);
+            void SetParameter(/*float Fval, */glm::vec3 Tval);
             //void OnDestruct();
+
+            float m_fovy;
+            glm::vec3 m_Procam_T, m_DeltaT;
 
         private:
 
@@ -43,10 +46,12 @@
 
             glm::mat4 m_MatProj, m_MatView;
             glm::mat4 m_Translation, m_Scale, m_Orientation;
-            glm::vec3 m_TranslationVec;
+            glm::vec3 m_TranslationVec, m_RotationVec;
 
             glm::mat4 m_Procam_R;
-            glm::vec3 m_Procam_T;
+
+
+
 
     };
 

@@ -144,7 +144,7 @@ int main(int argc, char *argv[])
 
   vpRealSense2 realsense;
   int width = 640, height = 480;
-  int fps = 30;
+  int fps = 60;
   rs2::config config;
   config.enable_stream(RS2_STREAM_COLOR, width, height, RS2_FORMAT_RGBA8, fps);
   config.enable_stream(RS2_STREAM_DEPTH, width, height, RS2_FORMAT_Z16, fps);
@@ -325,8 +325,12 @@ int main(int argc, char *argv[])
     /***********************************************************************************************************************************************************************/
     //RENDER
     //std::cout << "Hello" << std::endl;
-    myGLFWRenderer* glr = new myGLFWRenderer();
+    myGLFWRenderer* glrd = new myGLFWRenderer(true);
+    //std::cout << "GLFW Debug Renderer Initialized" << std::endl;
+
+    myGLFWRenderer* glr = new myGLFWRenderer(false);
     std::cout << "GLFW Renderer Initialized" << std::endl;
+
 
     while (!quit) {
       double t = vpTime::measureTimeMs();
@@ -413,11 +417,15 @@ int main(int argc, char *argv[])
       float deltaz = 0.011;
       if (!glfwWindowShouldClose(glr->m_Window))
       {
-        glm::vec3 translation = glm::vec3(cMo.getTranslationVector()[0] - deltaxy, cMo.getTranslationVector()[1] - deltaxy, cMo.getTranslationVector()[2] + deltaz);
+        glm::vec3 translation = glm::vec3(cMo.getTranslationVector()[0], cMo.getTranslationVector()[1], cMo.getTranslationVector()[2]);
         vpRzyxVector r;
         r.buildFrom(cMo.getRotationMatrix());
         glm::vec3 euler = glm::vec3(r[2] - M_PI_2, r[1], r[0]);
+
+        glrd->OnRender(translation, euler);
+        glr->SetParameter(/*glrd->GetParameterF(), */glrd->GetParameterT());
         glr->OnRender(translation, euler);
+
       }
       else
         quit = true;

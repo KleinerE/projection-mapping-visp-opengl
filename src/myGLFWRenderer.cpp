@@ -1,10 +1,13 @@
 #include "myGLFWRenderer.h"
 
+
+
 #include "imgui/imgui.h"
 #include "imgui/imgui_impl_glfw.h"
 #include "imgui/imgui_impl_opengl3.h"
 
-myGLFWRenderer::myGLFWRenderer()
+myGLFWRenderer::myGLFWRenderer(bool debugWindow = false)
+    :   m_debugWindow {debugWindow}
 //:   m_Window {nullptr}, m_CubeRenderer {nullptr}
 {
 
@@ -24,7 +27,13 @@ myGLFWRenderer::myGLFWRenderer()
     std::cout << "Monitors: " << monitorsCount  << std::endl;
         // Create a windowed mode window and its OpenGL context
     //m_Window = glfwCreateWindow(640, 480, "Cube Render", NULL, NULL);
-    m_Window = glfwCreateWindow(monitorW, monitorH, "my GLFW Renderer", activeMonitor, NULL);
+    if (debugWindow)
+        m_Window = glfwCreateWindow(640, 480, "GLFW renderer debug window", NULL, NULL);
+    else
+    {
+        glfwWindowHint(GLFW_AUTO_ICONIFY, GLFW_FALSE);
+        m_Window = glfwCreateWindow(monitorW, monitorH, "my GLFW Renderer", activeMonitor, NULL);
+    }
     if (!m_Window)
     {
         glfwTerminate();
@@ -32,6 +41,8 @@ myGLFWRenderer::myGLFWRenderer()
     }
         // Make the window's context current
     glfwMakeContextCurrent(m_Window);
+
+
     glfwSwapInterval(1);
     if (glewInit() != GLEW_OK)
         std::cout << "Error!" << std::endl;
@@ -40,13 +51,17 @@ myGLFWRenderer::myGLFWRenderer()
 
     m_CubeRenderer = new CubeRenderer();
 
-    // Setup Dear ImGui context
-    ImGui::CreateContext();
-    ImGuiIO& io = ImGui::GetIO(); (void)io;
-    ImGui::StyleColorsDark();
-    //ImGui::StyleColorsClassic();
-    ImGui_ImplGlfw_InitForOpenGL(m_Window, true);
-    ImGui_ImplOpenGL3_Init(glsl_version);
+    if (m_debugWindow)
+    {
+        // Setup Dear ImGui context
+        ImGui::CreateContext();
+        ImGuiIO& io = ImGui::GetIO(); (void)io;
+        ImGui::StyleColorsDark();
+        //ImGui::StyleColorsClassic();
+        ImGui_ImplGlfw_InitForOpenGL(m_Window, true);
+        ImGui_ImplOpenGL3_Init(glsl_version);
+    }
+
 }
 
 myGLFWRenderer::~myGLFWRenderer()
@@ -62,17 +77,36 @@ void myGLFWRenderer::OnRender(glm::vec3 translation, glm::vec3 rotation)
 {
     if (!glfwWindowShouldClose(m_Window))
     {
+        glfwMakeContextCurrent(m_Window);
         glfwPollEvents();
         m_CubeRenderer->SetTransform(translation, rotation);
         m_CubeRenderer->OnRender();
 
-        ImGui_ImplOpenGL3_NewFrame();
-        ImGui_ImplGlfw_NewFrame();
-        ImGui::NewFrame();
-        m_CubeRenderer->OnImGuiRender();
-        ImGui::Render();
-        ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        if(m_debugWindow)
+        {
+            ImGui_ImplOpenGL3_NewFrame();
+            ImGui_ImplGlfw_NewFrame();
+            ImGui::NewFrame();
+            m_CubeRenderer->OnImGuiRender();
+            ImGui::Render();
+            ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+        }
 
         glfwSwapBuffers(m_Window);
     }
+}
+
+void myGLFWRenderer::SetParameter(/*float Fval, */glm::vec3 Tval)
+{
+    m_CubeRenderer->SetParameter(/*Fval, */Tval);
+}
+
+float myGLFWRenderer::GetParameterF()
+{
+    return m_CubeRenderer->m_fovy;
+}
+
+glm::vec3 myGLFWRenderer::GetParameterT()
+{
+    return m_CubeRenderer->m_Procam_T;
 }

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1587207855 source:/home/eran-lab/Code/model-based-tracking/main.cpp
+1589027804 source:/home/eran-lab/Code/model-based-tracking/main.cpp
 	<iostream>
 	<visp3/core/vpConfig.h>
 	"myGLFWRenderer.h"
@@ -127,18 +127,17 @@
 	<stdint.h>
 	"imstb_textedit.h"
 
-1587207025 source:/home/eran-lab/Code/model-based-tracking/src/CubeRenderer.cpp
+1589026163 source:/home/eran-lab/Code/model-based-tracking/src/CubeRenderer.cpp
 	"ogl/CubeRenderer.h"
 	<GL/glew.h>
 	"ogl/DebugManager.h"
 	"imgui/imgui.h"
 	"glm/gtx/euler_angles.hpp"
 
-1587227844 /home/eran-lab/Code/model-based-tracking/include/ogl/CubeRenderer.h
+1588925515 /home/eran-lab/Code/model-based-tracking/include/ogl/CubeRenderer.h
 	"ogl/Renderer.h"
 	"ogl/VertexBufferLayout.h"
 	"ogl/Texture.h"
-	<GLFW/glfw3.h>
 	<iostream>
 	"glm/glm.hpp"
 	"glm/gtc/matrix_transform.hpp"
@@ -927,10 +926,11 @@
 	"ogl/Renderer.h"
 	"ogl/DebugManager.h"
 
-1587202980 /home/eran-lab/Code/model-based-tracking/include/myGLFWRenderer.h
+1588497634 /home/eran-lab/Code/model-based-tracking/include/myGLFWRenderer.h
 	"ogl/CubeRenderer.h"
+	<GLFW/glfw3.h>
 
-1587222313 source:/home/eran-lab/Code/model-based-tracking/src/myGLFWRenderer.cpp
+1588925816 source:/home/eran-lab/Code/model-based-tracking/src/myGLFWRenderer.cpp
 	"myGLFWRenderer.h"
 	"imgui/imgui.h"
 	"imgui/imgui_impl_glfw.h"
