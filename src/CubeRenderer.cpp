@@ -67,7 +67,7 @@
             m_Scale             {   glm::scale(glm::mat4(1.0f), glm::vec3(0.046f, 0.046f, 0.011f)) },
 
             m_Procam_R          {   glm::mat4(1.0f)},
-            m_Procam_T          {   glm::vec3(-0.0471192f, -0.0262709f, 0.00220152f)},
+            m_Procam_T          {   glm::vec3(-0.0471192f, -0.01f, 0.00220152f)},
             m_fovy              {   5.00   },
             m_DeltaT            {   glm::vec3(0.166f, -0.166f, 0.221f)}
     {
@@ -173,7 +173,7 @@
         ImGui::SliderFloat3("translation", &m_TranslationVec.x, -.8f, .8f);
         ImGui::SliderFloat3("rotation", &m_RotationVec.x, -5.0f, 5.0f);
         //ImGui::SliderFloat3("scale", &m_Scale.x, 0.1f, 5.0f);
-        ImGui::SliderFloat3("delta T", &m_Procam_T.x, -.8f, .8f);
+        ImGui::SliderFloat3("delta T", &m_Procam_T.x, -.1f, .1f);
         ImGui::Text("Application average %.3f ms/frame (%.1f FPS)", 1000.0f / ImGui::GetIO().Framerate, ImGui::GetIO().Framerate);
 
         ImGui::End();

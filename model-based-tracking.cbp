@@ -11,7 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
-				<Option parameters="--model_color model/cube/cube.cao --use_edges 1 --use_klt 1 --use_depth 1 --learn" />
+				<Option parameters="--model_color model/cube/cube.cao --use_edges 0 --use_klt 0 --use_depth 1 --learn" />
 				<Compiler>
 					<Add option="-g" />
 					<Add directory="/usr/local/include/visp3" />
